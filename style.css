@@ -95,12 +95,13 @@ body{
     border-radius: 30px;
     margin: 2px;
     border: 1px solid transparent; 
+    transition: 1s;
     
 }
 
 .categories p:hover{
     color: #A435F0;
-    background-color: white;
+    background-color:transparent;
     border: 1px solid black; /* Change border color on hover */
 }
 
@@ -114,10 +115,24 @@ body{
     background-color: white;
     padding: 2%;
     position: absolute;
-
-
     top: 30%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes zoom{
+    0%{
+        transform:scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 
 }
 .recommended{
@@ -138,7 +153,7 @@ body{
 
 
 .course-card{
-    width: 270px;
+    width: 310px;
     cursor:pointer;
      border-radius: 5px;
 
