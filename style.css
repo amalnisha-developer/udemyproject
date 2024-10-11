@@ -1,13 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: "Gabarito", sans-serif;
 }
 
-.navbar{
+.navbar {
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -17,69 +17,68 @@ body{
     top: 0;
     background-color: white;
     z-index: 1;
-
+    align-items: center;
 }
 
-.navbar__s1__title{
+.navbar__s1__title {
     color: #A435f0;
 }
 
-.navbar__s2{
+.navbar__s2 {
     padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
     width: 60%;
     display: flex;
     gap: 10px;
-
 }
 
-.navbar__s2 input{
+.navbar__s2 input {
     border: none;
     font-size: 16px;
     width: 100%;
 }
 
-.navbar__s2 input:focus{
+.navbar__s2 input:focus {
     outline: none;
 }
-.navbar__s3{
+
+.navbar__s3 {
     display: flex;
-    gap:10px;
+    gap: 10px;
     align-items: center;
 }
 
-
-.navbar__s3 a{
+.navbar__s3 a {
     text-decoration: none;
     color: black;
     cursor: pointer;
+}
 
+.navbar__s4{
+    display: none;
 }
 
 /* My learning popup */
-.mylearning{
+.mylearning {
     position: relative;
 }
-.mylearning__popup{
+
+.mylearning__popup {
     position: absolute;
     background-color: white;
     border: solid black 1px;
     width: 100px;
-    top:23px;
+    top: 23px;
     padding: 20px;
-    display:none;
-
+    display: none;
 }
 
 .mylearning:hover .mylearning__popup {
     display: block;
 }
 
-
-
-
-.categories{
+.categories {
     display: flex;
     padding: 10px;
     border-bottom: 1px solid black;
@@ -87,29 +86,28 @@ body{
     cursor: pointer;
 }
 
-
-.categories p{
+.categories p {
     background-color: #A435F0;
     color: white;
     padding: 10px;
     border-radius: 30px;
     margin: 2px;
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
     transition: 1s;
-    
 }
 
-.categories p:hover{
+.categories p:hover {
     color: #A435F0;
-    background-color:transparent;
+    background-color: transparent;
     border: 1px solid black; /* Change border color on hover */
 }
 
-.sale-image img{
+.sale-image img {
     width: 100%;
     position: relative;
 }
-.sale-image__offer{
+
+.sale-image__offer {
     width: 35%;
     border: solid black 2px;
     background-color: white;
@@ -121,112 +119,105 @@ body{
     animation-duration: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
-
 }
 
-@keyframes zoom{
-    0%{
-        transform:scale(0);
+@keyframes zoom {
+    0% {
+        transform: scale(0);
         opacity: 0;
     }
-    100%{
+    100% {
         transform: scale(1);
         opacity: 1;
     }
-
 }
-.recommended{
+
+.recommended {
     padding: 10px;
 }
 
-.recommended__container{
- display: flex;
- justify-content: space-between;
- margin-top: 10px;
- flex-wrap: wrap;
+.recommended__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
-.recommended__title{
+.recommended__title {
     font-weight: bolder;
 }
 
-
-
-.course-card{
-    width: 310px;
-    cursor:pointer;
-     border-radius: 5px;
-
-
-}
-
-
-.course-card img{
+.course-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+    cursor: pointer;
     border-radius: 5px;
-
 }
-.course-card img:hover{
+
+.course-card img {
+    border-radius: 5px;
+}
+
+.course-card img:hover {
     opacity: 0.9;
 }
 
-.course-card img{
+.course-card img {
     width: 100%;
     height: 50%;
-
 }
 
-.topics{
+.topics {
     padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
-    
 }
-.topics__container p{
+
+.topics__container p {
     padding: 10px;
     border: solid 1px gray;
     flex-grow: 1;
     flex-basis: 25%;
 }
 
-.popular__containter{
+.popular__containter {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
-
 }
 
-.popular{
+.popular {
     padding: 10px;
-
 }
-.footer{
+
+.footer {
     padding: 30px;
     background-color: black;
     color: white;
-
 }
 
-.footer__one{
+.footer__one {
     display: flex;
     gap: 10px;
-
 }
-.footer__one p{
+
+.footer__one p {
     margin: 20px;
-    cursor:pointer ;
+    cursor: pointer;
 }
 
-.footer__one p:hover{
+.footer__one p:hover {
     text-decoration: underline;
-
 }
-.footer__two{
+
+.footer__two {
     display: flex;
     margin: 20px;
     align-items: center;
@@ -234,3 +225,34 @@ body{
 }
 
 
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .course-card {
+        flex-basis: 40%;
+    }
+.categories{
+    display: none;
+
+}
+
+.sale-image__offer {
+
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+.navbar__s2,.navbar__s3{
+    display: none;
+}
+
+.navbar__s4{
+    display: block;
+}
+
+
+}
