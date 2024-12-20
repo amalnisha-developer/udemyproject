@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButton.addEventListener('click', () => {
         // Toggle sidebar visibility
         if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-250px'; // Hide sidebar
+            sidebar.style.left = '-300px'; // Hide sidebar
         } else {
             sidebar.style.left = '0px'; // Show sidebar
         }
