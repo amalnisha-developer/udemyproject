@@ -1,15 +1,10 @@
-// JavaScript for Sidebar Toggle
-document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.querySelector('.sidebar');
-    const toggleButton = document.querySelector('.navbar__s4');
+let sidebar = document.querySelector('.sidebar');
+let menuButton = document.querySelector('.navbar__s4'); 
 
-    toggleButton.addEventListener('click', () => {
-        // Toggle sidebar visibility
-        if (sidebar.style.left === '0px') {
-            sidebar.style.left = '-300px'; // Hide sidebar
-        } else {
-            sidebar.style.left = '0px'; // Show sidebar
-        }
-    });
+menuButton.addEventListener('click', () => {
+    if (sidebar.style.left === '-60%') {
+        sidebar.style.left = '0';
+    } else {
+        sidebar.style.left = '-60%';
+    }
 });
-

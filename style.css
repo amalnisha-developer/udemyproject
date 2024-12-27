@@ -46,9 +46,11 @@ body {
 }
 
 .navbar__s3 {
+ 
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbar__s3 a {
@@ -57,25 +59,22 @@ body {
     cursor: pointer;
 }
 
-.navbar__s4 i{
-    display: none;
-}
 
 /* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Hidden by default */
+    left: -60%; /* Hidden by default */
     width: 250px;
     height: 100%;
-    background-color:#A435f0;
+    background-color: #A435f0;
     color: white;
     padding: 20px;
     transition: left 0.5s ease;
     z-index: 999;
-    display: none;
 }
 
+/* Sidebar Content */
 .sidebar h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -100,32 +99,10 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background-color: #e258c0;
+    background-color: #8f768996;
 }
 
-/* Navbar Adjustments for Mobile */
-.navbar__s4 {
-    display: block;
-    cursor: pointer;
-    font-size: 20px;
-}
 
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .navbar__s2 {
-        display: none;
-    }
-
-    .navbar__s3 {
-        display: none;
-    }
-    .sidebar{
-        display:block;
-    }
-    .navbar__s4 i{
-        display: block;
-    }
-}
 
 /* My learning popup */
 .mylearning {
@@ -201,7 +178,7 @@ body {
 }
 
 .recommended {
-    padding: 10px;
+    padding: 20px;
 }
 
 .recommended__container {
@@ -301,7 +278,7 @@ body {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .course-card {
         flex-basis: 40%;
     }
@@ -320,9 +297,16 @@ body {
     display: none;
 }
 
-.navbar__s4{
+.navbar__s4 {
     display: block;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-
+}
+@media screen and (min-width:768px){
+    .navbar__s4{
+        display: none;
+    }
+    
 }
